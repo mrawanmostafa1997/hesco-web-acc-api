@@ -1,0 +1,28 @@
+[build]
+  publish = "wwwroot"
+  functions = "functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/auth"
+  to = "/auth.js"
+  status = 200
+
+[[redirects]]
+  from = "/export"
+  to = "/export.js"
+  status = 200
+
+[[redirects]]
+  from = "/hubs"
+  to = "/hubs.js"
+  status = 200
+
+[[redirects]]
+  from = "/services/aps"
+  to = "/services/aps.js"
+  status = 200
