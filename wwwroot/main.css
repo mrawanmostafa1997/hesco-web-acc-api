@@ -1,0 +1,209 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.page-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  color: #003366;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Header Styles */
+#header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366;
+  padding: 1rem 2rem;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 50px;
+}
+
+#login {
+  padding: 0.5rem 1rem;
+}
+
+/* Layout Styles */
+#container {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+.filter-container {
+  flex: 0 0 300px;
+}
+/* Sidebar Styles */
+#sidebar {
+  background-color: #003366;
+  color: white;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  height: 68vh;
+}
+
+#sidebar div {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio {
+  margin-bottom: 2rem;
+}
+.extension-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+/* Viewer Styles */
+.viewer {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.viewer-placeholder {
+  font-size: 1.5rem;
+  color: #555;
+  text-align: center;
+}
+#tree {
+  position: relative;
+  display: flex;
+  height: 29rem;
+  overflow-y: auto;
+}
+
+/* Queue Container Styles */
+.queue-container {
+  position: fixed; /* Ensures it stays in the bottom-left corner */
+  bottom: 2rem;
+  left: 0;
+  padding: 0 1rem;
+  padding-bottom: 0.5rem;
+  background-color: #003366;
+  color: white;
+  width: 300px;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 2px -2px 10px rgba(0, 0, 0, 0.2);
+}
+#queue-list {
+  height: 4rem;
+  overflow-y: auto;
+}
+#export,
+#download {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Footer Styles */
+.footer {
+  position: fixed; /* Sticks to the bottom of the viewport */
+  bottom: 0;
+  background-color: #f5f5f5; /* Light gray */
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%; /* Full window width */
+  border-top: 1px solid #ccc; /* Optional top border */
+}
+
+/* Preview Styles */
+#preview {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+/* Base style for queue items */
+.queue-item {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Successful state: Green background */
+.queue-item.successful {
+  background-color: #28a745; /* Green */
+}
+
+/* Failed state: Red background */
+.queue-item.failed {
+  background-color: #dc3545; /* Red */
+}
+
+/* In-progress state: Yellow background */
+.queue-item.in-progress {
+  background-color: #ffc107; /* Yellow */
+}
+
+/* Optional: Add hover effect for better user experience */
+.queue-item:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}

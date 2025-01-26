@@ -1,0 +1,94 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="https://hesco.es/wp-content/uploads/2021/03/cropped-SITEICON-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="stylesheet"
+      href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/inspire-tree-dom@4.0.6/dist/inspire-tree-light.min.css"
+    />
+    <link rel="stylesheet" href="/main.css" />
+
+    <title>HESCO</title>
+  </head>
+
+  <body>
+    <div class="page-container">
+      <div id="header">
+        <img
+          class="logo"
+          src="https://hesco.es/wp-content/uploads/2021/01/Hesco-Logo-3.4.png"
+          alt="Hesco"
+        />
+        <span class="title">Export PDFs from Acc</span>
+        <button id="login" style="visibility: hidden">Login</button>
+      </div>
+      <div class="content">
+        <div id="sidebar">
+          <div class="filter-container">
+            <h3>File Extension</h3>
+            <div class="radio-group">
+              <label for="all">all</label>
+              <input
+                class="radio"
+                id="all"
+                value="all"
+                name="extension"
+                type="radio"
+              />
+              <label for="pdf">.pdf</label>
+              <input
+                class="radio"
+                id="pdf"
+                value="pdf"
+                name="extension"
+                type="radio"
+              />
+              <label for="nwc">.nwc</label>
+              <input
+                class="radio"
+                id="nwc"
+                value="nwc"
+                name="extension"
+                type="radio"
+              />
+              <label for="rvt">.rvt</label>
+              <input
+                class="radio"
+                id="rvt"
+                value="rvt"
+                name="extension"
+                type="radio"
+              />
+            </div>
+          </div>
+          <p></p>
+          <div id="tree"></div>
+          <div class="queue-container">
+            <h3>File Export</h3>
+            <div id="queue-list"></div>
+            <button id="export">Export PDFs</button>
+          </div>
+        </div>
+        <div id="preview"></div>
+      </div>
+      <footer class="footer">
+        @Copyright for Hesco made by Marwan Mostafa
+      </footer>
+    </div>
+
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="https://unpkg.com/inspire-tree@4.3.1/dist/inspire-tree.js"></script>
+    <script src="https://unpkg.com/inspire-tree-dom@4.0.6/dist/inspire-tree-dom.min.js"></script>
+    <script src="/main.js" type="module"></script>
+  </body>
+</html>
