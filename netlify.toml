@@ -1,25 +1,19 @@
 [build]
-  publish = "wwwroot"
-  functions = "functions"
-
-[[redirects]]
-  from = "/api/*"
-  to = "/functions/:splat"
-  status = 200
+  publish = "wwwroot"  # Static files are in the wwwroot folder
 
 [[redirects]]
   from = "/auth"
-  to = "/auth.js"
+  to = "/routes/auth.js"
   status = 200
 
 [[redirects]]
   from = "/export"
-  to = "/export.js"
+  to = "/routes/export.js"
   status = 200
 
 [[redirects]]
   from = "/hubs"
-  to = "/hubs.js"
+  to = "/routes/hubs.js"
   status = 200
 
 [[redirects]]
